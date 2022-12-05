@@ -4,6 +4,8 @@ import Mag from "../images/loupe.png"
 
 export default function Header(ele) {
 
+    //geia!
+
     return(
         <div className="headerDiv">
             <h2 className="logo">FMONTESANTOS</h2>
