@@ -10,9 +10,14 @@ body {
 }
 
 .logo {
-  color: #F3EFE0;
+  color: #F9B009;
   font-weight: 500;
   margin-left: 20px;
+}
+
+.logo:hover {
+  cursor: pointer;
+  color: #E7EAEF;
 }
 
 .searchBar  {
@@ -35,31 +40,40 @@ body {
   border: 0;
   outline: 0;
   background: transparent;
-  border: 1px solid #F3EFE0;
+  border: 1px solid #656565;
   border-radius: 25px;
-  color: #F3EFE0;
+  color: #E7EAEF;
 }
 
 .headerDiv {
   height: 60px;
   display: flex;
-  background-color: #22A39F;
+  background-color: #2A2D32;
   align-items: center;
   justify-content: space-between;
-  outline: 0.5px solid #F3EFE0 ;
+  outline: 0.5px solid #656565 ;
+}
+
+.mainSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 200px;
 }
 
 .sidebarDiv {
-  color: #F3EFE0;
-  background-color: #22A39F;
+  color: #E7EAEF;
+  background-color: #2A2D32;
   width: 200px;
-  border-radius: 25px;
+  border-radius: 10px;
   margin-right: 50px;
-  margin-top: 50px;
-  outline: 0.5px solid #F3EFE0 ;
+  margin-top: 110px;
+  outline: 0.5px solid #656565 ;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .sidebarDiv > ul{
@@ -67,6 +81,7 @@ body {
   list-style: none;
   text-align: left;
   margin-left: -40px;
+  margin-bottom: 0px;
 }
 
 .sidebarDiv > ul > li {
@@ -75,29 +90,50 @@ body {
   margin-bottom: 20px;
 }
 
+.sidebarDiv > ul > li:hover {
+  color: #F9B009;
+  cursor: pointer;
+}
+
 .mainItems {
-  outline: 0.5px solid #F3EFE0 ;
-  color: #F3EFE0;
-  background-color: #22A39F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: 0.5px solid #656565 ;
+  color: #E7EAEF;
+  background-color: #2A2D32;
   width: 1000px;
   border-radius: 10px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-.mainDesc {
-  margin-left: 20px;
+.imageDiv > img {
   margin-right: 20px;
-  margin-top: 5px;
+  height: 150px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .mainInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20px;
-  margin-right: 50px;
+  width: 600px;
+  
+}
+
+.mainTitle {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.mainDesc{
+  font-size: 17px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.mainPrice{
+  padding-right: 50px;
+  font-weight: 500;
+  font-size: 20px;
+
 }
 
 .mainInfo > h3 {
@@ -105,12 +141,46 @@ body {
   margin-bottom: 0px;
 }
 
-.mainSection {
+.imageDiv {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
 }
+
+
 
 .mainThing {
   margin-top: 50px;
+}
+
+.tickBoxDiv {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.tickBox {
+  background-color: #2A2D32;
+  outline: 0.5px solid #656565 ;
+  color: #E7EAEF;
+  border-radius: 25px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  padding-bottom: 0px;
+  padding-top: 7px;
+  font-size: 20px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.tickBox:hover {
+  color: #F9B009;
+  cursor: pointer;
 }

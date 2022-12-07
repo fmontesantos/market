@@ -1,20 +1,21 @@
 import React, { Component } from "react";
-import ReactSearchBox from "react-search-box";
-import Mag from "../images/loupe.png"
+import Mag from "../images/Mag.png"
 
-export default function Header(ele) {
+export default function Header(props) {
 
-    //geia!
 
     return(
         <div className="headerDiv">
-            <h2 className="logo">FMONTESANTOS</h2>
+            <h2 className="logo" onClick = {props.returnToStart}>FMONTESANTOS</h2>
             <div className="searchBar">
                 <img src={Mag}/>
                 <input
                     type="text" 
                     placeholder="" 
                     className="searchText"
+                    onChange={props.handleChange}
+                    value={props.value}
+                    onKeyPress={props.handleKeyPress}
                 >
                 </input>
             </div>

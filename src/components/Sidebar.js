@@ -1,14 +1,13 @@
 import React, { Component }  from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import MainSection from "./MainSection";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.LBHszzcjG4uVpYR-SpxUUbUEwhz8S8csczNW63L93xM";
+    const token = process.env.REACT_APP_TOKEN;
 
     useEffect(() => {
         fetch("https://fe-assignment-server.herokuapp.com/api/v1/food/categories", {
@@ -28,13 +27,25 @@ export default function Sidebar() {
           )
       }, [])
 
-      console.log(items);
+      items.sort((a,b) => { 
+        if (a.index > b.index) {
+            return 1;
+        }
+        if (a.index < b.index) {
+            return -1;
+        }
+        return 0;
+    })
+
+      function handleClickCategory(categoryId) {
+        props.filterByCategoryId(categoryId)
+      };
 
     return(
         <div className="sidebarDiv">
             <ul>
             {items.map(item => (
-                <li key={item.index}>
+                <li key={item.index} onClick={()=>{handleClickCategory(item.id)}} style={{color: props.categoryId === item.id ? '#F9B009' : ''}}>
                     {item.name}
                 </li>
             ))}
