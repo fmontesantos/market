@@ -21,7 +21,7 @@ export default function MainSection(props) {
                         outline: props.isVeganActive ? '0.5px solid #2A2D32' : ''
                     }}
                     onClick={props.handleVeganClick}
-                    >Vegan
+                    >Vegie
                 </div>
                 <div 
                     className="tickBox" 
